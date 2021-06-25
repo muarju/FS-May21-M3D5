@@ -116,6 +116,8 @@ font-family: spotify-circular,spotify-circular-cyrillic,spotify-circular-arabic,
 }
 a{text-decoration: none;
 color: white;}
+a:hover{text-decoration: none;
+  color: white;}
 
 .logo{
     max-height: 40px;
@@ -420,22 +422,25 @@ button svg{
     box-shadow: 12px 12px 12px 2px #00000055;
 }
 
-#nav-top,#recently-played, #morning, #show-to-try,#album-header{
+#nav-top,#recently-played, #morning, #show-to-try,#album-header, #new-releases{
 	padding: 0px 32px;
 	margin-bottom: 50px;
 }
-.recently-played-cards .card, .show-to-try .card{
+.recently-played-cards .card, .show-to-try .card, .new-releases-cards .card{
 	background-color: rgba(255, 255, 255, 0.09);
     box-shadow: 12px 12px 12px 2px #00000055;
 	padding: 16px;
 }
-.recently-played-cards .card-body, .show-to-try .card-body{
+.recently-played-cards .card:hover, .show-to-try .card:hover, .new-releases-cards .card:hover{
+	background-color: #534341d6;
+}
+.recently-played-cards .card-body, .show-to-try .card-body, .new-releases-cards .card-body{
 	padding: 5px;
 }
-.recently-played-cards img,.show-to-try img{
+.recently-played-cards img,.show-to-try img, .new-releases-cards img{
 	border-radius: 12px;
 }
-.recently-played-cards .card-title{
+.recently-played-cards .card-title, .new-releases-cards .card-title{
 	font-size: 15px;
 	font-weight: 600;
 }
@@ -605,7 +610,6 @@ svg{
 }
 
 #main-content-artist{
-  background-image: url(../images/artist/artist-bg.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: scroll;

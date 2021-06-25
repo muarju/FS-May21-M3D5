@@ -1,0 +1,122 @@
+:root {
+    --loginHeight: 28px;
+}
+
+
+
+#nav-top {
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 0;
+    .arrows {
+        // margin: 10px;
+        > * {
+            fill: aliceblue;
+            background-color: rgb(0, 0, 0, .6);
+            // border: 1px solide white;
+            padding: 0px 1px;
+            border-radius: 50%;
+            margin-right: 8px;
+            
+        }
+    }
+    #login {
+        color: white;
+        background-color: #00000091;
+        border-radius: var( --loginHeight );
+        overflow: hidden;
+        img {
+            height: var( --loginHeight );
+            border-radius: 50%;
+        }
+    }
+}
+
+.good-morning {
+    font-size: 1.3rem;
+    font-family: sans-serif;
+    font-weight: 600;
+}
+
+.good-morning-cards {
+    display: grid;
+    grid-template-columns: repeat( 5, 1fr);
+    column-gap: 20px;
+    row-gap: 10px;
+    
+    div {
+        display: flex;
+        align-items: center;
+        background-color: rgba(255, 255, 255, 0.09);
+        border-radius: 4px;
+        box-shadow: 12px 12px 12px 2px #00000055;
+    }
+    img {
+        width: 25%;
+    }
+    h5 {
+        margin-left: 5px;
+        font-size: .7rem;
+    }
+}
+@media only screen and (device-width: 768px) {
+    .good-morning-cards {
+        display: grid;
+        grid-template-columns: repeat( 2, 1fr);
+        column-gap: 20px;
+        row-gap: 10px;
+        
+        div {
+            display: flex;
+            align-items: center;
+            background-color: rgba(255, 255, 255, 0.09);
+            border-radius: 4px;
+            box-shadow: 12px 12px 12px 2px #00000055;
+        }
+        img {
+            width: 25%;
+        }
+        h5 {
+            margin-left: 5px;
+            font-size: .7rem;
+        }
+    }
+ }
+section { // TODO: this has to be put on the home pages section only
+    
+    margin-bottom: 50px;
+}
+
+.recently-played-cards {
+    display: flex ;
+    column-gap: 20px;
+    div {
+        background-color: rgba(255, 255, 255, 0.03);
+        padding: 0.5em;
+        border-radius: 4px;
+        box-shadow: 12px 12px 12px 2px #00000055;
+        display: inline-block; /* for inline elements e.g. span, strong, em etc */
+        width: calc(80%); /* The trick is here! */
+        img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        h5 {
+            display: block; /* for inline elements e.g. span, strong, em etc */
+            width: 100px; /* The trick is here! */
+            margin: 12px 0 0 0;
+            font-size: .7rem;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            display: block;
+            overflow: hidden;
+        }
+        p {
+            color: #aaaaaa;
+            margin: 0;
+            padding: 0;
+        }
+
+    }
+
+}

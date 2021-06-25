@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>Album | Spotify</title>
+    <title>Spotify</title>
     <link rel="icon" href="assets/images/icon.png">
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -11,14 +11,10 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <!-- Font Awesome CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <!-- Custome CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
-
-    <link rel="stylesheet" href="./css/home.css">
-
-    <!-- <script async src="login_credentals.js"></script> -->
-    <!-- <script type="module" async src="./js/spotifyData.js"></script> -->
-    <!-- <script type="module" async src="./js/home.js"></script> -->
+     <!-- Required Jasvascript -->
     <script type="module" async src="./js/showRunner.js"></script>
   </head>
   <body>
@@ -26,29 +22,20 @@
        <div class="row flex-xl-nowrap">
            <div class="col-md-2 col-xs-2 sidebar">
                <img src="assets/images/logo.png" class="logo">
-               <nav class ="navbar ">
-                <ul class ="nav navbar-nav w-100">
-                <li class ="nav-item active">
-                <a class ="nav-link" href="index.html"><svg viewBox="0 0 512 512" width="24" height="24" xmlns="http://www.w3.org/2000/svg"><path d="M448 463.746h-149.333v-149.333h-85.334v149.333h-149.333v-315.428l192-111.746 192 110.984v316.19z" fill="currentColor"></path></svg> Home </a>
-                </li>
-                <li class ="nav-item">
-                <a class ="nav-link" href="#"><svg viewBox="0 0 512 512" width="24" height="24" xmlns="http://www.w3.org/2000/svg"><path d="M349.714 347.937l93.714 109.969-16.254 13.969-93.969-109.969q-48.508 36.825-109.207 36.825-36.826 0-70.476-14.349t-57.905-38.603-38.603-57.905-14.349-70.476 14.349-70.476 38.603-57.905 57.905-38.603 70.476-14.349 70.476 14.349 57.905 38.603 38.603 57.905 14.349 70.476q0 37.841-14.73 71.619t-40.889 58.921zM224 377.397q43.428 0 80.254-21.461t58.286-58.286 21.461-80.254-21.461-80.254-58.286-58.285-80.254-21.46-80.254 21.46-58.285 58.285-21.46 80.254 21.46 80.254 58.285 58.286 80.254 21.461z" fill="currentColor" fill-rule="evenodd"></path></svg> Search </a>
-                </li>
-                <li class ="nav-item mb-2">
-                <a class ="nav-link" href="album.html"><svg viewBox="0 0 512 512" width="24" height="24" xmlns="http://www.w3.org/2000/svg"><path d="M291.301 81.778l166.349 373.587-19.301 8.635-166.349-373.587zM64 463.746v-384h21.334v384h-21.334zM192 463.746v-384h21.334v384h-21.334z" fill="currentColor"></path></svg> Your Library </a>
-                </li>
-                <li class ="nav-item">
-                  <a class ="nav-link" href="#"><i class="fas fa-plus-square"></i> Create Playlist </a>
-                </li>
-                <li class ="nav-item">
-                  <a class ="nav-link" href="artist.html"><i class="fas fa-heart"></i> Liked Songs </a>
-                </li>
+               <aside id="colorlib-aside" role="complementary" class="js-fullheight">
+                <nav id="colorlib-main-menu" role="navigation">
+                <ul>
+                <li class="colorlib-active"><a href="#">Home</a></li>
+                <li><a href="#">Project</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contact</a></li>
                 </ul>
                 </nav>
-                <hr>
-                <a href="login.html" class="btn btn-link">Upgrade to Premium</a>
+                </aside> 
            </div>
-           <main id="main-content-album" class="col-md-10 col-xs-8 main-content-album">
+           <main id="main-content-home" class="col-md-10 col-xs-8 main-content">
             <nav id="nav-top">
               <div class="arrows">
                 <button data-testid="top-bar-back-button" aria-hidden="true" aria-label="Go back" disabled="" class="_8780d098bf4fa4b72c62f7f4c869e817-scss fcae410939337be1f28cb50fe3d0dcb3-scss" title="Go back"><svg role="img" focusable="false" height="24" width="24" viewBox="0 0 24 24" class="Svg-sc-1usfroi-0 kcaoHR _6fe5d5efc9b4a07d5c424071ac7cdacb-scss"><polyline points="16 4 7 12 16 20" fill="none" stroke="#dddddd"></polyline></svg></button>
@@ -66,38 +53,24 @@
                   </div>
               </div>
             </nav>
-            <section id="album-header">
-                <div class="row">
-                    <div class="col-lg-2 col-md-2 col-sm-6 col-xs-12">
-                        <div id="album-image"></div>
-                    </div>
-                    <div class="col-lg-10 col-md-10 col-sm-6 col-xs-12">
-                        <div class="album-details">
-                        <h4>ALBUM</h4>
-                        <h1 id="album_name">Bohemian Rhapsody (The Original Soundtrack)</h1>
-                        <div class="publish">
-                            <img src="assets/images/artist/1.jpg" width="24px" height="24px">
-                            <a href="#" id="artistname">Queen</a> <span class="year">2018</span><span class="total-songs">22</span>, <span>1 hr 19 min </span>
-                        </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section id="album-play">
-                <div class="album-play d-flex">
-                    <button class="btn-play bd-highlight rounded-circle" aria-label="Play" data-testid="play-button"><svg height="28" role="img" width="28" viewBox="0 0 24 24" aria-hidden="true"><polygon points="21.57 12 5.98 3 5.98 21 21.57 12" fill="currentColor" style="color: white;"></polygon></svg></button>
-                    <button class="btn-heart bd-highlight" type="button" role="switch" aria-checked="false" aria-label="Save to Your Library" title="Save to Your Library"><svg role="img" height="32" width="32" viewBox="0 0 32 32" class="Svg-ulyrgf-0 ghlXvf"><path d="M27.672 5.573a7.904 7.904 0 00-10.697-.489c-.004.003-.425.35-.975.35-.564 0-.965-.341-.979-.354a7.904 7.904 0 00-10.693.493A7.896 7.896 0 002 11.192c0 2.123.827 4.118 2.301 5.59l9.266 10.848a3.196 3.196 0 004.866 0l9.239-10.819A7.892 7.892 0 0030 11.192a7.896 7.896 0 00-2.328-5.619zm-.734 10.56l-9.266 10.848c-.837.979-2.508.979-3.346 0L5.035 16.104A6.9 6.9 0 013 11.192 6.9 6.9 0 015.035 6.28a6.935 6.935 0 014.913-2.048 6.89 6.89 0 014.419 1.605A2.58 2.58 0 0016 6.434c.914 0 1.555-.53 1.619-.585a6.908 6.908 0 019.346.431C28.277 7.593 29 9.337 29 11.192s-.723 3.6-2.062 4.941z"></path></svg></button>
-                    <button class="btn-dot bd-highlight"type="button" aria-haspopup="menu" aria-label="More"  title="More"><svg role="img" height="32" width="32" viewBox="0 0 32 32" class="Svg-ulyrgf-0 ghlXvf"><path d="M5.998 13.999A2 2 0 105.999 18a2 2 0 00-.001-4zm10.001 0A2 2 0 1016 18a2 2 0 000-4zm10.001 0A2 2 0 1026.001 18 2 2 0 0026 14z"></path></svg></button>
-                </div>
-                <table id="album-table" class="w-100">
-                    <tr>
-                        <th>#</th>
-                        <th>Title</th>
-                        <th><i class="far fa-clock"></i></th>
-                    </tr>
-                </table>
+           
+            <section id="morning">
+              <h2>Good morning</h2>
+              <div class="row row-cols-1 row-cols-sm-1 row-cols-md-3 row-cols-lg-5 my-3 morning-cards">
+              </div>
             </section>
 
+           <section id="recently-played">
+              <h3>Recently played</h3>
+              <div class="row row-cols-1 row-cols-sm-1 row-cols-md-3 row-cols-lg-6 my-3 recently-played-cards" >
+              </div>
+            </section>
+           
+             <section id="show-to-try">
+              <h3>Shows to try</h3>
+              <div class="row row-cols-1 row-cols-sm-1 row-cols-md-3 row-cols-lg-6 my-3 show-to-try" >
+              </div>
+            </section>
            </main>
        </div>
        <section class="sportifyfooter spotify-black" style="margin-bottom: 0px;">
@@ -142,10 +115,8 @@
         </div>
     </section>
    </div>
-
    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
-    
   </body>
 </html>
